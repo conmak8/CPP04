@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:43:20 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 20:24:59 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/25 20:32:15 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,15 @@ Brain::~Brain()
 }
 
 
-void setIdea(size_t index, const std::string &idea)
+void Brain::setIdea(size_t index, const std::string &idea)
 {
 	if ((index >=0) && (index <= 100))
-		return (ideas[index] = idea);
+		ideas[index] = idea;
 }
 
 std::string Brain::getIdea(size_t index) const
 {
 	if ((index >=0) && (index <= 100))
-		return (ideas[i]);
+		return (ideas[index]);
 	return ("wrong input!");
 }
