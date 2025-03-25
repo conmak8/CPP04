@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:24:47 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 14:16:05 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/25 16:28:40 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ public:
 		~Cat();									// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		// std::string getType() const;
 		void makeSound(void) const override;
 };
 
