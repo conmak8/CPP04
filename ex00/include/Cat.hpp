@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:24:47 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 09:41:11 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/25 14:16:05 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class Cat : public Animal
 {
-protected:
-		std::string type;
 public:
 		//-----------OCF-----------------//
 		Cat();									// * Constructor (default)
@@ -28,7 +26,8 @@ public:
 		~Cat();									// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		void makeSound(void);
+		// std::string getType() const;
+		void makeSound(void) const override;
 };
 
 #endif // !CAT_HPP

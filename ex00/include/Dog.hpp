@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:21:31 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 08:31:47 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/25 14:16:12 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class Dog : public Animal
 {
-protected:
-		std::string type;
 public:
 		//-----------OCF-----------------//
 		Dog();									// * Constructor (default)
@@ -28,7 +26,8 @@ public:
 		~Dog();									// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		void makeSound(void);
+		// std::string getType() const;
+		void makeSound(void) const override;
 };
 
 #endif // !DOG_HPP

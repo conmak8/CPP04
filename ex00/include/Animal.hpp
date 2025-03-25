@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:05:24 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 08:31:05 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/25 15:22:12 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ protected:
 public:
 		//-----------OCF-----------------//
 		Animal();									// * Constructor (default)
-		Animal(const std::string &name);			// * Constructor with parameters
+		Animal(const std::string &name);			// * Constructor with parameters  ?? i need it?
 		Animal(const Animal &copy);					// * Copy constructor
 		Animal &operator= (const Animal &copy);		// * Copy assignment operator
-		~Animal();									// * Destructor
+		virtual ~Animal();							// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		void makeSound(void);
+		std::string getType() const;
+		virtual void makeSound(void) const;
 };
 
 #endif // !ANIMAL_HPP
