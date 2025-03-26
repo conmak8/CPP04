@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:34:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 00:58:44 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 15:34:47 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ Dog::Dog() : Animal("Dog")
 //     std::cout << "Dog: Default constructor called" << std::endl;
 // }
 
-// Dog::Dog(const std::string &type) : Animal(type)
-// {
-// 	std::cout << CYAN << "🐶 Dog 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
-// }
+Dog::Dog(const std::string &type) : Animal(type)
+{
+	std::cout << CYAN << "🐶 Dog 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
+}
 
-Dog::Dog(const Dog &copy) : Animal(copy)
+Dog::Dog(const Dog &copy) : Animal(copy), brain(new Brain(*copy.brain))
 {
 	std::cout << CYAN << "🐶 Dog 🏗️  Copy Constructor called for " << UBR << type << RESET << std::endl;
 }
@@ -44,12 +44,15 @@ Dog &Dog::operator= (const Dog &copy)
 		return (*this);
 	}
 	Animal::operator=(copy);
+	delete brain;
+	brain = new Brain(*copy.brain);
 	std::cout << CYAN << "🐶 Dog © Copy Assignment operator called for " << UBR << type << RESET << std::endl;
 	return (*this);
 }
 
 Dog::~Dog()
 {
+	delete brain;
 	std::cout << RED << "🐶 Dog 🧨 Destructor called for " << UBR << type << RESET << std::endl;
 }
 
