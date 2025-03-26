@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:24:47 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 19:44:47 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 00:58:02 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 # include "Brain.hpp"
 
 
-class Cat : public Animal, public Brain
+class Cat : public Animal
 {
+private:
+		Brain *brain;
 public:
 		//-----------OCF-----------------//
 		Cat();									// * Constructor (default)

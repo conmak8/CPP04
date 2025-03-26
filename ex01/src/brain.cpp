@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:43:20 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 20:32:15 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 00:51:30 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ Brain::~Brain()
 {
 	std::cout << RED << "🧠 Brain: 🧨 Destructor called" << UBR << RESET << std::endl;
 }
-
 
 void Brain::setIdea(size_t index, const std::string &idea)
 {

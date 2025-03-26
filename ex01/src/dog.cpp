@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:34:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 19:51:45 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 00:58:44 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 Dog::Dog() : Animal("Dog")
 {
+	brain = new Brain();
 	std::cout << CYAN << "🐶 Dog 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
 }
 

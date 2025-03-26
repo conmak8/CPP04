@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:37:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 20:03:17 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 00:59:13 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 Cat::Cat() : Animal("Cat")
 {
+	brain = new Brain();
 	std::cout << CYAN << "😺 Cat 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
 }
 

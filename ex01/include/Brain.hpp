@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:39:35 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 20:22:55 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 00:50:52 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ protected:
 	std::string ideas[100];
 public:
 		//-----------OCF-----------------//
-		Brain();										// * Constructor (default)
+		Brain();									// * Constructor (default)
 		Brain(const std::string &name);				// * Constructor with parameters
 		Brain(const Brain &copy);					// * Copy constructor
 		Brain &operator= (const Brain &copy);		// * Copy assignment operator
