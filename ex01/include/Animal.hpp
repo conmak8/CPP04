@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:05:24 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 19:44:38 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 15:33:45 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ protected:
 public:
 		//-----------OCF-----------------//
 		Animal();									// * Constructor (default)
-		// Animal(const std::string &name);			// * Constructor with parameters  ?? i need it?
+		Animal(const std::string &name);			// * Constructor with parameters  ?? i need it?
 		Animal(const Animal &copy);					// * Copy constructor
 		Animal &operator= (const Animal &copy);		// * Copy assignment operator
 		virtual ~Animal();							// * Destructor

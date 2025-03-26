@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:24:47 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 00:58:02 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 15:32:21 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ private:
 public:
 		//-----------OCF-----------------//
 		Cat();									// * Constructor (default)
-		// Cat(const std::string &name);			// * Constructor with parameters
+		Cat(const std::string &name);			// * Constructor with parameters
 		Cat(const Cat &copy);					// * Copy constructor
 		Cat &operator= (const Cat &copy);		// * Copy assignment operator
-		~Cat();									// * Destructor
+		~Cat();									// * Destructor					??have i to make this one virtual and why?
 		//===============================//
 		//-----------Methods------------//
 		void makeSound(void) const override;
