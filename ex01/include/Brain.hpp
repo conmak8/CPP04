@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:39:35 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 00:50:52 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 15:15:51 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ public:
 		//===============================//
 		//-----------Methods------------//
 		//----Setter-------------------//
-		void setIdea(size_t index, const std::string &idea);
+		void setIdea(int index, const std::string &idea);
 		//------------------Getter----//
-		std::string getIdea(size_t index) const;
-}
+		std::string getIdea(int index) const;
+};
 
 #endif // !BRAIN_HPP

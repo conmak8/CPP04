@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:24:47 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 19:45:02 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 15:42:55 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongCat : public WrongAnimal
 public:
 		//-----------OCF-----------------//
 		WrongCat();										// * Constructor (default)
-		// WrongCat(const std::string &name);				// * Constructor with parameters
+		WrongCat(const std::string &name);				// * Constructor with parameters
 		WrongCat(const WrongCat &copy);					// * Copy constructor
 		WrongCat &operator= (const WrongCat &copy);		// * Copy assignment operator
 		~WrongCat();									// * Destructor
