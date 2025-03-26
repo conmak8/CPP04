@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   A_Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,21 +16,21 @@
 # include <iostream>
 
 
-class Animal
+class A_Animal
 {
 protected:
 		std::string type;
 public:
 		//-----------OCF-----------------//
-		Animal();									// * Constructor (default)
-		Animal(const std::string &name);			// * Constructor with parameters
-		Animal(const Animal &copy);					// * Copy constructor
-		Animal &operator= (const Animal &copy);		// * Copy assignment operator
-		virtual ~Animal();							// * Destructor
+		A_Animal();									// * Constructor (default)
+		A_Animal(const std::string &name);			// * Constructor with parameters
+		A_Animal(const A_Animal &copy);					// * Copy constructor
+		A_Animal &operator= (const A_Animal &copy);		// * Copy assignment operator
+		virtual ~A_Animal();							// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		std::string getType() const;
-		virtual void makeSound(void) const;
+		virtual std::string getType() const;
+		virtual void makeSound(void) const = 0;
 };
 
 #endif // !ANIMAL_HPP

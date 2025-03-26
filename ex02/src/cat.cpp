@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:37:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 15:35:16 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 21:07:14 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../include/Colors.hpp"
 
 
-Cat::Cat() : Animal("Cat")
+Cat::Cat() : A_Animal("Cat")
 {
 	brain = new Brain();
 	std::cout << CYAN << "😺 Cat 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
@@ -26,12 +26,12 @@ Cat::Cat() : Animal("Cat")
 //     std::cout << "Cat: Default constructor called" << std::endl;
 // }
 
-Cat::Cat(const std::string &type) : Animal(type)
+Cat::Cat(const std::string &type) : A_Animal(type)
 {
 	std::cout << CYAN << "😺 Cat 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy), brain(new Brain(*copy.brain))
+Cat::Cat(const Cat &copy) : A_Animal(copy), brain(new Brain(*copy.brain))
 {
 	std::cout << CYAN << "😺 Cat 🏗️  Copy Constructor called for " << UBR << type << RESET << std::endl;
 }
@@ -43,7 +43,7 @@ Cat &Cat::operator= (const Cat &copy)
 		std::cout << YELLOW << "⚠️ Self-assignment detected, no changes made!" << RESET << std::endl;
 		return (*this);
 	}
-	Animal::operator=(copy);
+	A_Animal::operator=(copy);
 	delete brain;
 	brain = new Brain(*copy.brain);
 	std::cout << CYAN << "😺 Cat © Copy Assignment operator called for " << UBR << type << RESET << std::endl;

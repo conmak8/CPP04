@@ -6,18 +6,18 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:24:47 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 16:32:48 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 21:11:50 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "Animal.hpp"
+# include "A_Animal.hpp"
 # include "Brain.hpp"
 
 
-class Cat : public Animal
+class Cat : public A_Animal
 {
 private:
 		Brain *brain;
@@ -30,7 +30,7 @@ public:
 		virtual ~Cat();							// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		void makeSound(void) const override;
+		virtual void makeSound(void) const override;
 };
 
 #endif // !CAT_HPP

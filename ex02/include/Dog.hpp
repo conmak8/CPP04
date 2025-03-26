@@ -6,18 +6,18 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:21:31 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 16:34:26 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 21:08:27 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "A_Animal.hpp"
 # include "Brain.hpp"
 
 
-class Dog : public Animal
+class Dog : public A_Animal
 {
 private:
 		Brain *brain;
@@ -30,7 +30,7 @@ public:
 		virtual ~Dog();							// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		void makeSound(void) const override;
+		virtual void makeSound(void) const override;
 };
 
 #endif // !DOG_HPP
