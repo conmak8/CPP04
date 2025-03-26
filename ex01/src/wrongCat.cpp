@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:37:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 19:51:58 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:38:33 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ WrongCat::WrongCat() : WrongAnimal("WrongCat")
 //     std::cout << "WrongCat: Default constructor called" << std::endl;
 // }
 
-// WrongCat::WrongCat(const std::string &type) : WrongAnimal(type)
-// {
-// 	std::cout << CYAN << "😺 WrongCat 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
-// }
+WrongCat::WrongCat(const std::string &type) : WrongAnimal(type)
+{
+	std::cout << CYAN << "😺 WrongCat 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
+}
 
 WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal(copy)
 {

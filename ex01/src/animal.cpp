@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:19:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 19:51:29 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:35:30 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 
 Animal::Animal() : type("Nameless stray creature")
 {
-	std::cout << CYAN << "🦦 Animal 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
+	std::cout << BLUE << "🦦 Animal 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
 }
-																	// ? do i need this??
-// Animal::Animal(const std::string &type) : type(type)
-// {
-// 	std::cout << CYAN << "🦦 Animal 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
-// }
+
+Animal::Animal(const std::string &type) : type(type)
+{
+	std::cout << BLUE << "🦦 Animal 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
+}
 
 Animal::Animal(const Animal &copy) : type(copy.type)
 {
-	std::cout << CYAN << "🦦 Animal 🏗️  Copy Constructor called for " << UBR << type << RESET << std::endl;
+	std::cout << BLUE << "🦦 Animal 🏗️  Copy Constructor called for " << UBR << type << RESET << std::endl;
 }
 
 Animal &Animal::operator= (const Animal &copy)
@@ -37,7 +37,7 @@ Animal &Animal::operator= (const Animal &copy)
 		return (*this);
 	}
 	this->type = copy.type;
-	std::cout << CYAN << "🦦 Animal © Copy Assignment operator called for " << UBR << type << RESET << std::endl;
+	std::cout << BLUE << "🦦 Animal © Copy Assignment operator called for " << UBR << type << RESET << std::endl;
 	return (*this);
 }
 

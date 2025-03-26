@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:34:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 15:34:47 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 15:47:53 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Dog::Dog() : Animal("Dog")
 {
 	brain = new Brain();
-	std::cout << CYAN << "🐶 Dog 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
+	std::cout << WHITE << "🐶 Dog 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
 }
 
 //v.2
@@ -28,12 +28,12 @@ Dog::Dog() : Animal("Dog")
 
 Dog::Dog(const std::string &type) : Animal(type)
 {
-	std::cout << CYAN << "🐶 Dog 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
+	std::cout << WHITE << "🐶 Dog 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
 }
 
 Dog::Dog(const Dog &copy) : Animal(copy), brain(new Brain(*copy.brain))
 {
-	std::cout << CYAN << "🐶 Dog 🏗️  Copy Constructor called for " << UBR << type << RESET << std::endl;
+	std::cout << WHITE << "🐶 Dog 🏗️  Copy Constructor called for " << UBR << type << RESET << std::endl;
 }
 
 Dog &Dog::operator= (const Dog &copy)
@@ -46,7 +46,7 @@ Dog &Dog::operator= (const Dog &copy)
 	Animal::operator=(copy);
 	delete brain;
 	brain = new Brain(*copy.brain);
-	std::cout << CYAN << "🐶 Dog © Copy Assignment operator called for " << UBR << type << RESET << std::endl;
+	std::cout << WHITE << "🐶 Dog © Copy Assignment operator called for " << UBR << type << RESET << std::endl;
 	return (*this);
 }
 

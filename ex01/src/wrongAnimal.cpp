@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:19:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/25 19:51:52 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:38:18 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ WrongAnimal::WrongAnimal() : type("Nameless stray creature")
 {
 	std::cout << CYAN << "🦦 WrongAnimal 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
 }
-																	// ? do i need this??
-// WrongAnimal::WrongAnimal(const std::string &type) : type(type)
-// {
-// 	std::cout << CYAN << "🦦 WrongAnimal 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
-// }
+
+WrongAnimal::WrongAnimal(const std::string &type) : type(type)
+{
+	std::cout << CYAN << "🦦 WrongAnimal 🏗️  Constructor called for " << UBR << type << RESET << std::endl;
+}
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copy) : type(copy.type)
 {
