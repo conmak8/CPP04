@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 09:36:14 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 12:01:09 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 16:12:31 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ Character &Character::operator=(const Character &src)										// * Copy assignm
 	this->name = src.name;
 	for (int i = 0; i < 4; i++)
 	{
-		if (inventory[i]) 																	// ?why to check this one?
+		if (inventory[i])
 		{
 			delete inventory[i]; // Clean existing slot clearly
-			inventory[i] = NULL;
+			// inventory[i] = NULL;
 		}
 		if (src.inventory[i])
 			inventory[i] = src.inventory[i]->clone();
@@ -96,6 +96,7 @@ void Character::equip(AMateria *m)
 		}
 	}
 	std::cout << "👤 " << name << " can't equip more than 4 Materias!" << std::endl;
+	delete m; // Clean up the Materia if not equipped
 }
 
 void Character::unequip(int idx)
@@ -107,8 +108,9 @@ void Character::unequip(int idx)
 	}
 	if (inventory[idx])
 	{
-		inventory[idx] = NULL;
 		std::cout << "👤 " << name << " unequipped Materia " << "at index: " << idx << std::endl;
+		delete inventory[idx];
+		inventory[idx] = NULL;
 	}
 	else
 		std::cout << "👤 " << name << " can't unequip a NULL Materia!" << std::endl;

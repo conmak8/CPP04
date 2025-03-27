@@ -75,6 +75,7 @@ void MateriaSource::learnMateria(AMateria *m)
 		{
 			learnedMaterias[i] = m->clone();
 			std::cout << "📚 MateriaSource learned " << m->getType() << " at slot " << i << std::endl;
+			delete m;
 			return ;
 		}
 	}
