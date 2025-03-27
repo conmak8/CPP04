@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:34:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 15:47:53 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 21:45:45 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,19 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
 	std::cout << "📣 Woof woof i am a DOG 🐶" << std::endl;
+}
+
+void Dog::setIdea(int index, const std::string &idea)
+{
+	brain->setIdea(index, idea);
+}
+
+void Dog::printIdeas() const
+{
+	std::cout << "🐶 Dog's Ideas:" << std::endl;
+	int count = brain->getIdeaCount();
+	for (int i = 0; i < count; ++i)
+	{
+		std::cout << " - " << brain->getIdea(i) << std::endl;
+	}
 }

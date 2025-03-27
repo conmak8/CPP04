@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:37:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 15:35:16 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 21:44:44 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,19 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout << "📣 Niaou Niaou i am a CAT 😺" << std::endl;
+}
+
+void Cat::setIdea(int index, const std::string &idea)
+{
+	brain->setIdea(index, idea);
+}
+
+void Cat::printIdeas() const
+{
+	std::cout << "😺 Cat's Ideas:" << std::endl;
+	int count = brain->getIdeaCount();
+	for (int i = 0; i < count; ++i)
+	{
+		std::cout << " - " << brain->getIdea(i) << std::endl;
+	}
 }

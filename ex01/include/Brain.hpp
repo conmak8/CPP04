@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:39:35 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 15:15:51 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 21:43:50 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Brain
 {
 protected:
 	std::string ideas[100];
+	int			ideaCount;
 public:
 		//-----------OCF-----------------//
 		Brain();									// * Constructor (default)
@@ -33,6 +34,7 @@ public:
 		void setIdea(int index, const std::string &idea);
 		//------------------Getter----//
 		std::string getIdea(int index) const;
+		int getIdeaCount() const;
 };
 
 #endif // !BRAIN_HPP

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:43:20 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 15:15:47 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 21:50:32 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,24 @@ Brain::~Brain()
 void Brain::setIdea(int index, const std::string &idea)
 {
 	if ((index >=0) && (index <= 100))
+	{
+		if (ideas[index].empty())
+			ideaCount++;
 		ideas[index] = idea;
+	}
+	else
+		std::cout << "🧠 Index out of range. Cannot set idea." << std::endl;
 }
 
 std::string Brain::getIdea(int index) const
 {
 	if ((index >=0) && (index <= 100))
 		return (ideas[index]);
-	return ("😑wrong input!");
+	else
+		return "🧠 Index out of range. No idea stored.";
+}
+
+int Brain::getIdeaCount() const
+{
+	return ideaCount;
 }

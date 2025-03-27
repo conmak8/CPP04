@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 08:21:31 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/26 16:34:26 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 21:39:22 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ public:
 		//===============================//
 		//-----------Methods------------//
 		void makeSound(void) const override;
+
+		void setIdea(int index, const std::string &idea);
+		void printIdeas() const;
 };
 
 #endif // !DOG_HPP
