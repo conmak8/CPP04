@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 09:36:14 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 16:12:31 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 17:38:21 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,14 @@ Character::Character() : name("Unknown")													// * Constructor (default)
 	std::cout << "👤 Character 🏗️ Default Constructor called" << std::endl;
 }
 
-Character::Character(const std::string &name) : name(name)									// * Constructor with parameter
+Character::Character(const std::string &name) : name(name),	unequippedCount(0)				// * Constructor with parameter
 {
 	for (int i = 0; i < 4; i++)
 		inventory[i] = NULL;
+	for (int i = 0; i < MAX_UNEQUIPPED; i++)
+	{			
+		unequipped[i] = nullptr;
+	}
 	std::cout << "👤 Character 🏗️ Constructor called for: " << name << std::endl;
 }
 
@@ -71,6 +75,8 @@ Character::~Character()																	// * Destructor
 		if (inventory[i])
 			delete inventory[i];
 	}
+	for (int i = 0; i < unequippedCount; ++i)
+		delete unequipped[i];
 	std::cout << "👤 Character 🧨 Destructor called for: " << name << std::endl;
 }
 
@@ -109,7 +115,8 @@ void Character::unequip(int idx)
 	if (inventory[idx])
 	{
 		std::cout << "👤 " << name << " unequipped Materia " << "at index: " << idx << std::endl;
-		delete inventory[idx];
+		unequipped[unequippedCount++] = inventory[idx];
+		// delete inventory[idx];
 		inventory[idx] = NULL;
 	}
 	else
