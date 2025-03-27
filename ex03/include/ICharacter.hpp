@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 07:06:40 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 07:24:33 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 07:31:21 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ public:
 		virtual void equip(AMateria *m) = 0;
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter &target) = 0;
-
 };
 
 #endif // !ICHARACTER_HPP
