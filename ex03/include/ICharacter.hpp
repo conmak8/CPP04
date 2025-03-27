@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 07:06:40 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 07:31:21 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 08:02:42 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 # define ICHARACTER_HPP
 
 # include <iostream>
-# include "AMateria.hpp" // * Forward Declaration abstract class AMateria
+# include "AMateria.hpp"
 
-class AMatertia; // * Forward Declaration
 
 class ICharacter
 {
 public:
-		virtual ~ICharacter() {};
-
+		virtual ~ICharacter() {}									// * Destructor
+		//===============================//
+		//-----------Methods------------//
 		virtual std::string const &getName() const = 0;
 		virtual void equip(AMateria *m) = 0;
 		virtual void unequip(int idx) = 0;
