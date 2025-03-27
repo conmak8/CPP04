@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 08:35:32 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 08:41:20 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 08:57:16 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include "AMateria.hpp"
+
 
 class Ice : public AMateria
 {
