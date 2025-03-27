@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 11:20:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 16:09:12 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 20:51:25 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ int main()
 	
 	
 	return 0;
-
 
 
 // IMateriaSource* src = new MateriaSource();

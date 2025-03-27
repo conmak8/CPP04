@@ -42,7 +42,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &src)							// * Cop
 	for (int i = 0; i < 4; i++)
 	{
 		if (learnedMaterias[i])
-			delete learnedMaterias[i];													// ? why set to NULL?
+			delete learnedMaterias[i];														// ? why set to NULL?
 		if (src.learnedMaterias[i])
 			learnedMaterias[i] = src.learnedMaterias[i]->clone();
 		else

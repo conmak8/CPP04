@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmakario <cmakario@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 09:21:46 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 17:32:42 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 20:02:26 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "AMateria.hpp"
 
 # define MAX_UNEQUIPPED 100
+
 
 class Character : public ICharacter
 {
