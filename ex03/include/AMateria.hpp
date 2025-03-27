@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 07:49:45 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 08:29:57 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 08:38:40 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 		//===============================//
 		//-----------Methods------------//
 		std::string const &getType() const;			// * Getter
-		virtual AMateria* clone() const = 0;
+		virtual AMateria *clone() const = 0;
 		virtual void use(ICharacter &target);
 };
 

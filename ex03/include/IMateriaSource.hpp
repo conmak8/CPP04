@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 07:33:52 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 08:02:36 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 08:38:32 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 		//===============================//
 		//-----------Methods------------//
 		virtual void learnMateria(AMateria *) = 0;
-		virtual AMateria* createMateria(std::string const &type) = 0;
+		virtual AMateria *createMateria(std::string const &type) = 0;
 };
 
 #endif // !IMATERIASOURCE_HPP

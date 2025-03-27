@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 08:04:57 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 08:27:54 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 08:50:12 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ std::string const &AMateria::getType() const
 
 void AMateria::use(ICharacter &target)
 {
-	std::cout << "🥨 AMateria of type: " << type << " used on " << target.getName() << std::endl;
+	std::cout << "🥨 AMateria of type: " << type << " used without effect on " << target.getName() << std::endl;
 }
