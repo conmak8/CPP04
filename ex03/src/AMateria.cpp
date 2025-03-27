@@ -6,11 +6,12 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 08:04:57 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 08:50:12 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 11:22:54 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+
 
 AMateria::AMateria() : type("Unknown")																	// * Constructor (default)
 {

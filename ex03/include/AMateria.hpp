@@ -6,12 +6,12 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 07:49:45 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 08:38:40 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 11:25:10 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
-#define AMATERIA
+#define AMATERIA_HPP
 
 # include <iostream>
 # include "ICharacter.hpp"
@@ -29,7 +29,7 @@ public:
 		virtual ~AMateria();						// * Destructor
 		//===============================//
 		//-----------Methods------------//
-		std::string const &getType() const;			// * Getter
+		std::string const &getType() const;
 		virtual AMateria *clone() const = 0;
 		virtual void use(ICharacter &target);
 };

@@ -1,5 +1,5 @@
 # Project Name
-NAME		=	$(BIN_DIR)/abstract
+NAME		=	$(BIN_DIR)/AMateria
 
 # Command-line arguments for run and valgrind
 ARGS		=
@@ -16,7 +16,8 @@ OBJS		=	$(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
 # Compiler & Flags
 CXX			=	c++
-CXXFLAGS	=	-Wall -Werror -Wextra -std=c++17
+CXXFLAGS	=	-Wall -Werror -Wextra -std=c++17 # -g for debugging and then run gdb (or lldb for mac) ./a.out-> \
+														 type run (?not sure)-> when seg faul found type bt(backtrace)
 
 # Include paths
 INCLUDES	=	-I $(INCLUDE_DIR)  # Updated to include the new include folder

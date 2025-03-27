@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 09:36:14 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 09:57:54 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 12:01:09 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void Character::unequip(int idx)
 	if (inventory[idx])
 	{
 		inventory[idx] = NULL;
-		std::cout << "👤 " << name << " unequipped Materia " << inventory[idx]->getType() << "at index: " << idx << std::endl;
+		std::cout << "👤 " << name << " unequipped Materia " << "at index: " << idx << std::endl;
 	}
 	else
 		std::cout << "👤 " << name << " can't unequip a NULL Materia!" << std::endl;

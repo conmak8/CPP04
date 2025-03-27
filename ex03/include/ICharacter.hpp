@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 07:06:40 by cmakario          #+#    #+#             */
-/*   Updated: 2025/03/27 08:02:42 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/03/27 11:27:13 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define ICHARACTER_HPP
 
 # include <iostream>
-# include "AMateria.hpp"
+// # include "AMateria.hpp"
 
+class AMateria; // Forward declaration
 
 class ICharacter
 {
